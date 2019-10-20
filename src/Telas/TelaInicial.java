@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author void
@@ -27,104 +29,115 @@ public class TelaInicial extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        panelTelaInicialBase = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnTelaInicialCadastro = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        login = new javax.swing.JButton();
+        btnTelaInicialLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(310, 510));
-        jPanel1.setLayout(null);
+        panelTelaInicialBase.setPreferredSize(new java.awt.Dimension(310, 510));
+        panelTelaInicialBase.setLayout(null);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo-png-100x93.png"))); // NOI18N
-        jPanel1.add(jLabel2);
+        panelTelaInicialBase.add(jLabel2);
         jLabel2.setBounds(40, 60, 82, 80);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Já possui uma conta?");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 400, 180, 20);
+        panelTelaInicialBase.add(jLabel3);
+        jLabel3.setBounds(20, 400, 200, 20);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("sua sede!");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(80, 240, 80, 22);
+        panelTelaInicialBase.add(jLabel4);
+        jLabel4.setBounds(60, 230, 90, 22);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Bem-vindo ao");
-        jPanel1.add(jLabel5);
+        panelTelaInicialBase.add(jLabel5);
         jLabel5.setBounds(140, 90, 170, 20);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("iDrink");
-        jPanel1.add(jLabel6);
+        panelTelaInicialBase.add(jLabel6);
         jLabel6.setBounds(140, 110, 80, 22);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 0));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton1.setText("CRIAR UMA CONTA");
-        jButton1.setToolTipText("");
-        jButton1.setBorder(null);
-        jPanel1.add(jButton1);
-        jButton1.setBounds(30, 300, 250, 40);
+        btnTelaInicialCadastro.setBackground(new java.awt.Color(255, 255, 0));
+        btnTelaInicialCadastro.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnTelaInicialCadastro.setText("CRIAR UMA CONTA");
+        btnTelaInicialCadastro.setToolTipText("");
+        btnTelaInicialCadastro.setBorder(null);
+        panelTelaInicialBase.add(btnTelaInicialCadastro);
+        btnTelaInicialCadastro.setBounds(30, 300, 250, 40);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Falta pouco pra matar");
-        jPanel1.add(jLabel7);
-        jLabel7.setBounds(80, 220, 180, 20);
+        panelTelaInicialBase.add(jLabel7);
+        jLabel7.setBounds(60, 200, 200, 20);
 
-        login.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        login.setForeground(new java.awt.Color(255, 255, 0));
-        login.setText("Entrar");
-        login.setBorder(null);
-        login.setOpaque(false);
-        login.setContentAreaFilled(false);
-        login.setBorderPainted(false);
-        login.addActionListener(new java.awt.event.ActionListener() {
+        btnTelaInicialLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnTelaInicialLogin.setForeground(new java.awt.Color(255, 255, 0));
+        btnTelaInicialLogin.setText("Entrar");
+        btnTelaInicialLogin.setBorder(null);
+        btnTelaInicialLogin.setOpaque(false);
+        btnTelaInicialLogin.setContentAreaFilled(false);
+        btnTelaInicialLogin.setBorderPainted(false);
+        btnTelaInicialLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginActionPerformed(evt);
+                btnTelaInicialLoginActionPerformed(evt);
             }
         });
-        jPanel1.add(login);
-        login.setBounds(210, 400, 60, 20);
+        panelTelaInicialBase.add(btnTelaInicialLogin);
+        btnTelaInicialLogin.setBounds(210, 400, 60, 20);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ImagemFundoTelaInicial.png"))); // NOI18N
-        jPanel1.add(jLabel1);
+        panelTelaInicialBase.add(jLabel1);
         jLabel1.setBounds(0, 0, 310, 510);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelTelaInicialBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelTelaInicialBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-        // TODO add your handling code here:
+    private void btnTelaInicialLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaInicialLoginActionPerformed
+        //---------------Instanciando a tela de login-------------
+        TelaLogin Tela = new TelaLogin();
         
-    }//GEN-LAST:event_loginActionPerformed
+        //---------------Definindo o Tamanho da tela de login e onde ela vai aparecer-------------
+        Tela.setSize(310, 510); // Tamanho
+        Tela.setLocation(0, 0); // Onde irar aparecer
+        
+        //---------------Configurando o Painel Principal para receber o novo painel--------------
+        panelTelaInicialBase.removeAll();// Removendo tudo do painel principal
+        panelTelaInicialBase.add(Tela, BorderLayout.CENTER); // Chamando a tela e dizendo onde vai aparecer tambem
+        panelTelaInicialBase.revalidate();
+        panelTelaInicialBase.repaint();
+        
+    }//GEN-LAST:event_btnTelaInicialLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,7 +181,8 @@ public class TelaInicial extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnTelaInicialCadastro;
+    private javax.swing.JButton btnTelaInicialLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -176,7 +190,6 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton login;
+    public static javax.swing.JPanel panelTelaInicialBase;
     // End of variables declaration//GEN-END:variables
 }
