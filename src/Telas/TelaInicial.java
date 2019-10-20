@@ -44,9 +44,9 @@ public class TelaInicial extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(310, 510));
         jPanel1.setLayout(null);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\renan\\Documents\\NetBeansProjects\\iDrinks-master\\image\\logo-png-100x93.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logo-png-100x93.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(40, 60, 82, 100);
+        jLabel2.setBounds(40, 60, 82, 80);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,8 +101,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jPanel1.add(login);
         login.setBounds(210, 400, 60, 20);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\renan\\Documents\\NetBeansProjects\\iDrinks-master\\image\\ImagemFundoTelaInicial.png")); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ImagemFundoTelaInicial.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 310, 510);
 
