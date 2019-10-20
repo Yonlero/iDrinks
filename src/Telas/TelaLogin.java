@@ -32,8 +32,8 @@ public class TelaLogin extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         btnTelaLoginEntrar = new javax.swing.JButton();
         panelTelaLoginEmail = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         txtTelaLoginEmail = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
         panelTelaLoginSenha = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         pfTelaLoginSenha = new javax.swing.JPasswordField();
@@ -63,36 +63,19 @@ public class TelaLogin extends javax.swing.JPanel {
         btnTelaLoginEntrar.setToolTipText("");
         btnTelaLoginEntrar.setBorder(null);
         add(btnTelaLoginEntrar);
-        btnTelaLoginEntrar.setBounds(20, 340, 250, 40);
+        btnTelaLoginEntrar.setBounds(30, 310, 250, 40);
 
         panelTelaLoginEmail.setBackground(new java.awt.Color(255, 255, 255, 100));
         panelTelaLoginEmail.setBorder(null);
-
-        jLabel3.setText("E-mail");
+        panelTelaLoginEmail.setLayout(null);
 
         txtTelaLoginEmail.setBorder(null);
+        panelTelaLoginEmail.add(txtTelaLoginEmail);
+        txtTelaLoginEmail.setBounds(10, 20, 256, 15);
 
-        javax.swing.GroupLayout panelTelaLoginEmailLayout = new javax.swing.GroupLayout(panelTelaLoginEmail);
-        panelTelaLoginEmail.setLayout(panelTelaLoginEmailLayout);
-        panelTelaLoginEmailLayout.setHorizontalGroup(
-            panelTelaLoginEmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTelaLoginEmailLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelTelaLoginEmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtTelaLoginEmail)
-                    .addGroup(panelTelaLoginEmailLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(0, 214, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        panelTelaLoginEmailLayout.setVerticalGroup(
-            panelTelaLoginEmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTelaLoginEmailLayout.createSequentialGroup()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtTelaLoginEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        jLabel7.setText("E-mail");
+        panelTelaLoginEmail.add(jLabel7);
+        jLabel7.setBounds(10, 0, 42, 15);
 
         add(panelTelaLoginEmail);
         panelTelaLoginEmail.setBounds(10, 180, 280, 40);
@@ -111,19 +94,17 @@ public class TelaLogin extends javax.swing.JPanel {
             .addGroup(panelTelaLoginSenhaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelTelaLoginSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pfTelaLoginSenha)
-                    .addGroup(panelTelaLoginSenhaLayout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(0, 211, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(jLabel4)
+                    .addComponent(pfTelaLoginSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelTelaLoginSenhaLayout.setVerticalGroup(
             panelTelaLoginSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTelaLoginSenhaLayout.createSequentialGroup()
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(pfTelaLoginSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         add(panelTelaLoginSenha);
@@ -131,7 +112,7 @@ public class TelaLogin extends javax.swing.JPanel {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/FundoTelaLogin.png"))); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(1, -5, 310, 520);
+        jLabel1.setBounds(0, 0, 310, 520);
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -139,10 +120,10 @@ public class TelaLogin extends javax.swing.JPanel {
     private javax.swing.JButton btnTelaLoginEntrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel panelTelaLoginEmail;
     private javax.swing.JPanel panelTelaLoginSenha;
     private javax.swing.JPasswordField pfTelaLoginSenha;
