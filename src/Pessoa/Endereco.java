@@ -8,44 +8,44 @@ public class Endereco{
     private String Cidade;
     private String Complemento;
 //------------------------Começando os Metodos GET de todos esses atributos--------------
-    public String GetRua(){ //Metodo para Retornar a Rua do Cliente
+    public String getRua(){ //Metodo para Retornar a Rua do Cliente
         return this.Rua;
     }
 
-    public String GetBairro(){ //Metodo para Retornar o Bairro do Cliente
+    public String getBairro(){ //Metodo para Retornar o Bairro do Cliente
         return this.Bairro;
     }
 
-    public String GetCEP(){ //Metodo para Retornar o CEP do Cliente
+    public String getCEP(){ //Metodo para Retornar o CEP do Cliente
         return this.CEP;
     }
 
-    public String GetCidade(){ //Metodo para Retornar a Cidade do Cliente
+    public String getCidade(){ //Metodo para Retornar a Cidade do Cliente
         return this.Cidade;
     }
 
-    public String GetComplemento(){ //Metodo para Retonar o Complemento do Endereco do Cliente caso tenha
+    public String getComplemento(){ //Metodo para Retonar o Complemento do Endereco do Cliente caso tenha
         return this.Complemento;
     }
 
 //-----------------------Começando os metodos SET de todos esses atributos-----------------
-    public void SetRua(String Rua){ //Definindo a Rua do Cliente
+    public void setRua(String Rua){ //Definindo a Rua do Cliente
         this.Rua = Rua;
     }
 
-    public void SetBairro(String Bairro){ //Definindo o Bairro 
+    public void setBairro(String Bairro){ //Definindo o Bairro 
         this.Bairro = Bairro;
     }
 
-    public void SetCEP(String CEP){ //Definindo o CEP
+    public void setCEP(String CEP){ //Definindo o CEP
         this.CEP = CEP;
     }
 
-    public void SetCidade(String Cidade){ //Definindo a cidade
+    public void setCidade(String Cidade){ //Definindo a cidade
         this.Cidade = Cidade;
     }
 
-    public void SetComplemento(String Complemento){ //Definindo o Complemento
+    public void setComplemento(String Complemento){ //Definindo o Complemento
         this.Complemento = Complemento;
     }
 
@@ -66,5 +66,8 @@ public class Endereco{
         this.Cidade = Cidade;
         this.Complemento = Complemento;
     }
-    //Não existe Construtor vazio pois e obrigatorio o cliente possuir um endereco!!!
+    
+    //Construtor vazio somente para ser chamado
+    public Endereco() {
+    }
 }

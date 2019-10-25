@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Telas;
 
+import Pessoa.Cliente;
 import java.awt.BorderLayout;
+import java.util.ArrayList;
 
-/**
- *
- * @author void
- */
 public class TelaInicial extends javax.swing.JFrame {
 
     /**
@@ -79,6 +72,11 @@ public class TelaInicial extends javax.swing.JFrame {
         btnTelaInicialCadastro.setText("CRIAR UMA CONTA");
         btnTelaInicialCadastro.setToolTipText("");
         btnTelaInicialCadastro.setBorder(null);
+        btnTelaInicialCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelaInicialCadastroActionPerformed(evt);
+            }
+        });
         panelTelaInicialBase.add(btnTelaInicialCadastro);
         btnTelaInicialCadastro.setBounds(30, 300, 250, 40);
 
@@ -138,6 +136,24 @@ public class TelaInicial extends javax.swing.JFrame {
         panelTelaInicialBase.repaint();
         
     }//GEN-LAST:event_btnTelaInicialLoginActionPerformed
+
+    private void btnTelaInicialCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaInicialCadastroActionPerformed
+    //================================CONFIGURANDO PARA APARECER A TELA DE CADASTRO========================================
+        //--------------------------Instanciando a tela de cadastro
+        TelaCadastroDadosPessoais TelaCadastro = new TelaCadastroDadosPessoais();
+        
+        //--------------Definindo o Tamanho da tela de cadastro---------------------
+        TelaCadastro.setSize(310, 510);
+        TelaCadastro.setLocation(0, 0);
+        
+        //--------------Configurando o Painel Principal----------------------------
+        panelTelaInicialBase.removeAll();
+        panelTelaInicialBase.add(TelaCadastro, BorderLayout.CENTER);
+        panelTelaInicialBase.revalidate();
+        panelTelaInicialBase.repaint();
+    //================================FIM DA CONFIGURAÇÃO PRA APARECER A TELA DE CADASTRO===================================
+    
+    }//GEN-LAST:event_btnTelaInicialCadastroActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,5 +1,10 @@
 package Pessoa;
 
+import java.util.ArrayList;
+import Telas.*;
+import Telas.TelaCadastroDadosPessoais;
+import Telas.TelaCadastroEndereco;
+
 public class Cliente{
     //------------------------Atributos Comum para todos Cliente-----------------------------
     private String Nome;
@@ -59,5 +64,21 @@ public class Cliente{
     public void setEnderecoPessoa(Endereco EnderecoPessoa) {
         this.EnderecoPessoa = EnderecoPessoa;
     }
+    
+    //-----------------------Criando um construtor sem o endereco pois o mesmo sera adicionado posteriormente---------------
+
+    public Cliente(String Nome, String CPF, String Email, String Telefone, String DataNascimento) {
+        this.Nome = Nome;
+        this.CPF = CPF;
+        this.Email = Email;
+        this.Telefone = Telefone;
+        this.DataNascimento = DataNascimento;
+    }
+    
+    //----------------------Construtor Vazio Somente para inicializar estancias quaisquer
+
+    public Cliente() {
+    }
+    
     
 }

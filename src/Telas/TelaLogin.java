@@ -78,7 +78,7 @@ public class TelaLogin extends javax.swing.JPanel {
         jLabel7.setBounds(10, 0, 42, 15);
 
         add(panelTelaLoginEmail);
-        panelTelaLoginEmail.setBounds(10, 180, 280, 40);
+        panelTelaLoginEmail.setBounds(10, 180, 280, 50);
 
         panelTelaLoginSenha.setBackground(new java.awt.Color(255, 255, 255, 120));
         panelTelaLoginSenha.setBorder(null);
@@ -108,11 +108,11 @@ public class TelaLogin extends javax.swing.JPanel {
         );
 
         add(panelTelaLoginSenha);
-        panelTelaLoginSenha.setBounds(10, 250, 280, 40);
+        panelTelaLoginSenha.setBounds(10, 250, 280, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/FundoTelaLogin.png"))); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(0, 0, 310, 520);
+        jLabel1.setBounds(0, -20, 310, 550);
     }// </editor-fold>//GEN-END:initComponents
 
 
