@@ -71,15 +71,15 @@ public class TelaLogin extends javax.swing.JPanel {
             }
         });
         add(btnTelaLoginEntrar);
-        btnTelaLoginEntrar.setBounds(30, 310, 250, 40);
+        btnTelaLoginEntrar.setBounds(30, 390, 250, 40);
 
-        panelTelaLoginEmail.setBackground(new java.awt.Color(255, 255, 255, 100));
+        panelTelaLoginEmail.setBackground(new java.awt.Color(255, 255, 255));
         panelTelaLoginEmail.setBorder(null);
         panelTelaLoginEmail.setLayout(null);
 
         txtTelaLoginEmail.setBorder(null);
         panelTelaLoginEmail.add(txtTelaLoginEmail);
-        txtTelaLoginEmail.setBounds(10, 20, 256, 15);
+        txtTelaLoginEmail.setBounds(10, 20, 256, 30);
 
         jLabel7.setText("E-mail");
         panelTelaLoginEmail.add(jLabel7);
@@ -88,7 +88,7 @@ public class TelaLogin extends javax.swing.JPanel {
         add(panelTelaLoginEmail);
         panelTelaLoginEmail.setBounds(10, 180, 280, 50);
 
-        panelTelaLoginSenha.setBackground(new java.awt.Color(255, 255, 255, 120));
+        panelTelaLoginSenha.setBackground(new java.awt.Color(255, 255, 255));
         panelTelaLoginSenha.setBorder(null);
 
         jLabel4.setText("Senha");

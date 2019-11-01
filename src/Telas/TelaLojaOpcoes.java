@@ -488,9 +488,9 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
         panelTelaLojaOpcoesMenu.add(jLabel36);
         jLabel36.setBounds(170, 0, 30, 30);
 
-        jLabel37.setText("Pedidos");
+        jLabel37.setText("Carrinho");
         panelTelaLojaOpcoesMenu.add(jLabel37);
-        jLabel37.setBounds(160, 40, 57, 15);
+        jLabel37.setBounds(160, 40, 70, 15);
 
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - perfil.png"))); // NOI18N
         jLabel38.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -588,14 +588,13 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
         TelaPrincipalCarrinho Carrinho = new TelaPrincipalCarrinho();
         
         Carrinho.panelTelaCarrinho.setSize(310, 450);
-        panelTelaLojaOpcoesMenu.setSize(310, 60);
-        panelTelaLojaOpcoesMenu.setLocation(0, 450);
-        Carrinho.panelTelaCarrinho.setLocation(0, 450);
-        
+        //panelTelaLojaOpcoesMenu.setSize(310, 60);
+        Carrinho.panelTelaCarrinho.setLocation(0, 0);
+        //panelTelaLojaOpcoesMenu.setLocation(0, 450);
         
         panelTelaInicialBase.removeAll();
         panelTelaInicialBase.add(Carrinho.panelTelaCarrinho, BorderLayout.CENTER);
-        panelTelaInicialBase.add(panelTelaLojaOpcoesMenu, BorderLayout.CENTER);
+        //panelTelaInicialBase.add(panelTelaLojaOpcoesMenu, BorderLayout.CENTER);
         panelTelaInicialBase.revalidate();
         panelTelaInicialBase.repaint();
         
