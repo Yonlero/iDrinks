@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author void
@@ -313,7 +315,7 @@ public class TelaPrincipalCarrinho extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Pedido encaminhado com sucesso");
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
