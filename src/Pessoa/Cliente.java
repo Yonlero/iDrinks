@@ -1,9 +1,5 @@
 package Pessoa;
 
-import java.util.ArrayList;
-import Telas.*;
-import Telas.TelaCadastroDadosPessoais;
-import Telas.TelaCadastroEndereco;
 
 public class Cliente{
     //------------------------Atributos Comum para todos Cliente-----------------------------

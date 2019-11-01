@@ -7,14 +7,14 @@ package Telas;
 
 /**
  *
- * @author UEPA-LAB06-PC15
+ * @author void
  */
-public class TelaPerfil extends javax.swing.JFrame {
+public class TelaPrincipalPerfil extends javax.swing.JPanel {
 
     /**
-     * Creates new form TelaPerfil
+     * Creates new form TelaPrincipalPerfil
      */
-    public TelaPerfil() {
+    public TelaPrincipalPerfil() {
         initComponents();
     }
 
@@ -62,19 +62,24 @@ public class TelaPerfil extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
         jLabel1.setText("Fullano de tal");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(90, 10, 97, 15);
 
         btnTelaPerfilEditar.setOpaque(false);
         btnTelaPerfilEditar.setContentAreaFilled(false);
         btnTelaPerfilEditar.setBorderPainted(false);
         btnTelaPerfilEditar.setForeground(new java.awt.Color(102, 102, 102));
         btnTelaPerfilEditar.setText("Editar Perfil");
+        jPanel1.add(btnTelaPerfilEditar);
+        btnTelaPerfilEditar.setBounds(80, 30, 117, 25);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/foto rosto 60x60.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(10, 10, 54, 53);
 
         btnTelaPerfilNotificacoes.setOpaque(false);
         btnTelaPerfilNotificacoes.setContentAreaFilled(false);
@@ -87,11 +92,17 @@ public class TelaPerfil extends javax.swing.JFrame {
                 btnTelaPerfilNotificacoesActionPerformed(evt);
             }
         });
+        jPanel1.add(btnTelaPerfilNotificacoes);
+        btnTelaPerfilNotificacoes.setBounds(60, 130, 192, 32);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/seta volta (1).png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(10, 80, 28, 38);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText(">");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(270, 140, 10, 15);
 
         btnTelaPerfilAjuda.setOpaque(false);
         btnTelaPerfilAjuda.setContentAreaFilled(false);
@@ -99,6 +110,8 @@ public class TelaPerfil extends javax.swing.JFrame {
         btnTelaPerfilAjuda.setText("    Ajuda");
         btnTelaPerfilAjuda.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
         btnTelaPerfilAjuda.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(btnTelaPerfilAjuda);
+        btnTelaPerfilAjuda.setBounds(60, 180, 192, 30);
 
         btnTelaPerfilVoltar.setOpaque(false);
         btnTelaPerfilVoltar.setContentAreaFilled(false);
@@ -109,6 +122,8 @@ public class TelaPerfil extends javax.swing.JFrame {
         btnTelaPerfilVoltar.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
         btnTelaPerfilVoltar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnTelaPerfilVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(btnTelaPerfilVoltar);
+        btnTelaPerfilVoltar.setBounds(60, 90, 190, 29);
 
         btnTelaPerfilConfiguracoes.setOpaque(false);
         btnTelaPerfilConfiguracoes.setContentAreaFilled(false);
@@ -116,6 +131,8 @@ public class TelaPerfil extends javax.swing.JFrame {
         btnTelaPerfilConfiguracoes.setText("    Configurações");
         btnTelaPerfilConfiguracoes.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
         btnTelaPerfilConfiguracoes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(btnTelaPerfilConfiguracoes);
+        btnTelaPerfilConfiguracoes.setBounds(60, 230, 192, 32);
 
         btnTelaPerfilSeguranca.setOpaque(false);
         btnTelaPerfilSeguranca.setContentAreaFilled(false);
@@ -123,6 +140,8 @@ public class TelaPerfil extends javax.swing.JFrame {
         btnTelaPerfilSeguranca.setText("    Segurança");
         btnTelaPerfilSeguranca.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
         btnTelaPerfilSeguranca.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(btnTelaPerfilSeguranca);
+        btnTelaPerfilSeguranca.setBounds(60, 280, 192, 30);
 
         btnTelaPerfilCadastroEstabelecimento.setOpaque(false);
         btnTelaPerfilCadastroEstabelecimento.setContentAreaFilled(false);
@@ -130,6 +149,8 @@ public class TelaPerfil extends javax.swing.JFrame {
         btnTelaPerfilCadastroEstabelecimento.setText("    Cadastre Seu Estabelecimento");
         btnTelaPerfilCadastroEstabelecimento.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
         btnTelaPerfilCadastroEstabelecimento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(btnTelaPerfilCadastroEstabelecimento);
+        btnTelaPerfilCadastroEstabelecimento.setBounds(60, 330, 192, 30);
 
         btnTelaPerfilFaleConosco.setOpaque(false);
         btnTelaPerfilFaleConosco.setContentAreaFilled(false);
@@ -137,30 +158,54 @@ public class TelaPerfil extends javax.swing.JFrame {
         btnTelaPerfilFaleConosco.setText("    Fale Conosco");
         btnTelaPerfilFaleConosco.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(204, 204, 204)));
         btnTelaPerfilFaleConosco.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel1.add(btnTelaPerfilFaleConosco);
+        btnTelaPerfilFaleConosco.setBounds(60, 370, 192, 30);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/sino.png"))); // NOI18N
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(10, 130, 22, 32);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/ajuda (1).png"))); // NOI18N
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(10, 180, 30, 30);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/engrenagem (1).png"))); // NOI18N
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(10, 230, 32, 32);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/loja.png"))); // NOI18N
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(10, 330, 32, 30);
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/escudo.png"))); // NOI18N
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(10, 280, 30, 30);
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/fale.png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(10, 370, 32, 30);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel17.setText(">");
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(270, 190, 10, 15);
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel18.setText(">");
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(270, 240, 10, 15);
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel19.setText(">");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(270, 380, 10, 15);
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel21.setText(">");
+        jPanel1.add(jLabel21);
+        jLabel21.setBounds(270, 280, 10, 15);
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(246, 203, 0, 0);
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setLayout(null);
@@ -197,172 +242,30 @@ public class TelaPerfil extends javax.swing.JFrame {
         jPanel11.add(jLabel39);
         jLabel39.setBounds(250, 40, 37, 15);
 
+        jPanel1.add(jPanel11);
+        jPanel11.setBounds(0, 450, 310, 60);
+
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel22.setText(">");
+        jPanel1.add(jLabel22);
+        jLabel22.setBounds(270, 330, 10, 15);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel5))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnTelaPerfilCadastroEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(btnTelaPerfilSeguranca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnTelaPerfilFaleConosco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnTelaPerfilConfiguracoes, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
-                            .addComponent(btnTelaPerfilAjuda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnTelaPerfilNotificacoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel21)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel18)
-                                .addComponent(jLabel19)
-                                .addComponent(jLabel17)
-                                .addComponent(jLabel4))
-                            .addComponent(jLabel22)))
-                    .addComponent(btnTelaPerfilVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnTelaPerfilEditar)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(jLabel1)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnTelaPerfilEditar))
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel19)
-                        .addGap(48, 48, 48))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnTelaPerfilNotificacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel4))
-                            .addComponent(jLabel7))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnTelaPerfilAjuda, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel17)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnTelaPerfilConfiguracoes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel18))
-                            .addComponent(jLabel9))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnTelaPerfilSeguranca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel21)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btnTelaPerfilCadastroEstabelecimento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel22))
-                            .addComponent(jLabel11))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnTelaPerfilFaleConosco, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnTelaPerfilVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(232, 232, 232)))
-                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTelaPerfilNotificacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaPerfilNotificacoesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTelaPerfilNotificacoesActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaPerfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaPerfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaPerfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaPerfil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaPerfil().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnTelaPerfilAjuda;

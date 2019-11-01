@@ -5,6 +5,9 @@
  */
 package Telas;
 
+import static Telas.TelaInicial.panelTelaInicialBase;
+import java.awt.BorderLayout;
+
 /**
  *
  * @author void
@@ -62,6 +65,11 @@ public class TelaLogin extends javax.swing.JPanel {
         btnTelaLoginEntrar.setText("ENTRAR");
         btnTelaLoginEntrar.setToolTipText("");
         btnTelaLoginEntrar.setBorder(null);
+        btnTelaLoginEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelaLoginEntrarActionPerformed(evt);
+            }
+        });
         add(btnTelaLoginEntrar);
         btnTelaLoginEntrar.setBounds(30, 310, 250, 40);
 
@@ -102,7 +110,7 @@ public class TelaLogin extends javax.swing.JPanel {
             panelTelaLoginSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTelaLoginSenhaLayout.createSequentialGroup()
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addComponent(pfTelaLoginSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -114,6 +122,19 @@ public class TelaLogin extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(0, -20, 310, 550);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTelaLoginEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaLoginEntrarActionPerformed
+        TelaLojaOpcoes LojaOpcoes = new TelaLojaOpcoes();
+        
+        LojaOpcoes.setSize(310, 510);
+        LojaOpcoes.setLocation(0, 0);
+        
+        
+        panelTelaInicialBase.removeAll();
+        panelTelaInicialBase.add(LojaOpcoes, BorderLayout.CENTER);
+        panelTelaInicialBase.revalidate();
+        panelTelaInicialBase.repaint();
+    }//GEN-LAST:event_btnTelaLoginEntrarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
