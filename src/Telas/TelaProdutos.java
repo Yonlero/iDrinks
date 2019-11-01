@@ -172,9 +172,9 @@ public class TelaProdutos extends javax.swing.JPanel {
         jPanel11.add(jLabel35);
         jLabel35.setBounds(10, 0, 30, 30);
 
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - recibo.png"))); // NOI18N
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - carrinho.png"))); // NOI18N
         jPanel11.add(jLabel36);
-        jLabel36.setBounds(180, 0, 20, 30);
+        jLabel36.setBounds(180, 0, 26, 30);
 
         jLabel37.setText("Pedidos");
         jPanel11.add(jLabel37);
@@ -231,9 +231,15 @@ public class TelaProdutos extends javax.swing.JPanel {
         jPanel3.add(jPanel4);
         jPanel4.setBounds(0, 100, 140, 40);
 
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones -cerveja.png"))); // NOI18N
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel11);
-        jLabel11.setBounds(40, 30, 40, 70);
+        jLabel11.setBounds(-10, 30, 150, 70);
 
         jLabel28.setFont(new java.awt.Font("Dialog", 2, 10)); // NOI18N
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -275,9 +281,10 @@ public class TelaProdutos extends javax.swing.JPanel {
         jPanel5.add(jPanel6);
         jPanel6.setBounds(0, 100, 140, 40);
 
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones -cerveja 2.png"))); // NOI18N
         jPanel5.add(jLabel15);
-        jLabel15.setBounds(60, 30, 20, 70);
+        jLabel15.setBounds(0, 30, 140, 70);
 
         jLabel30.setFont(new java.awt.Font("Dialog", 2, 10)); // NOI18N
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -318,9 +325,10 @@ public class TelaProdutos extends javax.swing.JPanel {
         jPanel9.add(jPanel10);
         jPanel10.setBounds(0, 100, 140, 40);
 
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - destilado.png"))); // NOI18N
         jPanel9.add(jLabel25);
-        jLabel25.setBounds(50, 30, 30, 66);
+        jLabel25.setBounds(0, 30, 140, 66);
 
         jLabel32.setFont(new java.awt.Font("Dialog", 2, 10)); // NOI18N
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -360,9 +368,10 @@ public class TelaProdutos extends javax.swing.JPanel {
         jPanel7.add(jPanel8);
         jPanel8.setBounds(0, 100, 140, 40);
 
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - agua mineral.png"))); // NOI18N
         jPanel7.add(jLabel19);
-        jLabel19.setBounds(60, 30, 20, 66);
+        jLabel19.setBounds(0, 30, 140, 66);
 
         jLabel31.setFont(new java.awt.Font("Dialog", 2, 10)); // NOI18N
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -404,6 +413,19 @@ public class TelaProdutos extends javax.swing.JPanel {
         panelTelaInicialBase.revalidate();
         panelTelaInicialBase.repaint();
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        TelaPrincipalPedido TelaPedido = new TelaPrincipalPedido();
+        
+        TelaPedido.panelTelaPrincipalPedido.setSize(310, 510);
+        TelaPedido.panelTelaPrincipalPedido.setLocation(0, 0);
+        
+        panelTelaInicialBase.removeAll();
+        panelTelaInicialBase.add(TelaPedido.panelTelaPrincipalPedido, BorderLayout.CENTER);
+        panelTelaInicialBase.revalidate();
+        panelTelaInicialBase.repaint();
+        
+    }//GEN-LAST:event_jLabel11MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

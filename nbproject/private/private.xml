@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/void/iDrinks/src/Telas/TelaCadastroEndereco.java</file>
-            <file>file:/home/void/iDrinks/src/Pessoa/Endereco.java</file>
-            <file>file:/home/void/iDrinks/src/Telas/TelaInicial.java</file>
-            <file>file:/home/void/iDrinks/src/Telas/TelaCadastroDadosPessoais.java</file>
-            <file>file:/home/void/iDrinks/src/Pessoa/Cliente.java</file>
-            <file>file:/home/void/iDrinks/src/Telas/TelaLogin.java</file>
+            <file>file:/home/void/iDrinks/src/Telas/TelaLojaOpcoes.java</file>
+            <file>file:/home/void/iDrinks/src/Telas/TelaProdutos.java</file>
+            <file>file:/home/void/iDrinks/src/Telas/TelaPrincipalPerfil.java</file>
         </group>
     </open-files>
 </project-private>

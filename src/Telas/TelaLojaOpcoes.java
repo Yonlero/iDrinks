@@ -31,6 +31,8 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
     private void initComponents() {
 
         TelaLojaOpcoesPainelPrincipal = new javax.swing.JPanel();
+        panelConteudoLojaOpcoes = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -72,8 +74,7 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
+        panelTelaLojaOpcoesMenu = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
@@ -89,6 +90,11 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
         TelaLojaOpcoesPainelPrincipal.setPreferredSize(new java.awt.Dimension(310, 510));
         TelaLojaOpcoesPainelPrincipal.setLayout(null);
 
+        panelConteudoLojaOpcoes.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel2.setText("Bares, Pub's, Conveniências");
+
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, null, new java.awt.Color(51, 51, 51)));
 
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -99,7 +105,7 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
@@ -116,9 +122,6 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        TelaLojaOpcoesPainelPrincipal.add(jPanel2);
-        jPanel2.setBounds(10, 10, 290, 58);
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -131,9 +134,6 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 50, Short.MAX_VALUE)
         );
-
-        TelaLojaOpcoesPainelPrincipal.add(jPanel1);
-        jPanel1.setBounds(0, 0, 300, 50);
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(null);
@@ -423,35 +423,73 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(jPanel3);
 
-        TelaLojaOpcoesPainelPrincipal.add(jScrollPane1);
-        jScrollPane1.setBounds(0, 100, 310, 330);
+        javax.swing.GroupLayout panelConteudoLojaOpcoesLayout = new javax.swing.GroupLayout(panelConteudoLojaOpcoes);
+        panelConteudoLojaOpcoes.setLayout(panelConteudoLojaOpcoesLayout);
+        panelConteudoLojaOpcoesLayout.setHorizontalGroup(
+            panelConteudoLojaOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelConteudoLojaOpcoesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addContainerGap(75, Short.MAX_VALUE))
+            .addGroup(panelConteudoLojaOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelConteudoLojaOpcoesLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(panelConteudoLojaOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelConteudoLojaOpcoesLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        panelConteudoLojaOpcoesLayout.setVerticalGroup(
+            panelConteudoLojaOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelConteudoLojaOpcoesLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jLabel2)
+                .addContainerGap(340, Short.MAX_VALUE))
+            .addGroup(panelConteudoLojaOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelConteudoLojaOpcoesLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(panelConteudoLojaOpcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelConteudoLojaOpcoesLayout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(32, 32, 32)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Bares, Pub's, Conveniências");
-        TelaLojaOpcoesPainelPrincipal.add(jLabel2);
-        jLabel2.setBounds(10, 80, 230, 17);
+        TelaLojaOpcoesPainelPrincipal.add(panelConteudoLojaOpcoes);
+        panelConteudoLojaOpcoes.setBounds(0, 0, 310, 430);
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setLayout(null);
+        panelTelaLojaOpcoesMenu.setBackground(new java.awt.Color(255, 255, 255));
+        panelTelaLojaOpcoesMenu.setLayout(null);
 
         jLabel13.setText("Inicío");
-        jPanel7.add(jLabel13);
+        panelTelaLojaOpcoesMenu.add(jLabel13);
         jLabel13.setBounds(20, 40, 37, 15);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - lupa.png"))); // NOI18N
-        jPanel7.add(jLabel14);
+        panelTelaLojaOpcoesMenu.add(jLabel14);
         jLabel14.setBounds(100, 0, 30, 30);
 
         jLabel29.setText("Busca");
-        jPanel7.add(jLabel29);
+        panelTelaLojaOpcoesMenu.add(jLabel29);
         jLabel29.setBounds(90, 40, 42, 15);
 
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - recibo.png"))); // NOI18N
-        jPanel7.add(jLabel36);
-        jLabel36.setBounds(180, 0, 20, 30);
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - carrinho.png"))); // NOI18N
+        jLabel36.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel36MouseClicked(evt);
+            }
+        });
+        panelTelaLojaOpcoesMenu.add(jLabel36);
+        jLabel36.setBounds(170, 0, 30, 30);
 
         jLabel37.setText("Pedidos");
-        jPanel7.add(jLabel37);
+        panelTelaLojaOpcoesMenu.add(jLabel37);
         jLabel37.setBounds(160, 40, 57, 15);
 
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - perfil.png"))); // NOI18N
@@ -460,19 +498,24 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
                 jLabel38MouseClicked(evt);
             }
         });
-        jPanel7.add(jLabel38);
+        panelTelaLojaOpcoesMenu.add(jLabel38);
         jLabel38.setBounds(250, 0, 30, 30);
 
         jLabel39.setText("Perfil");
-        jPanel7.add(jLabel39);
+        panelTelaLojaOpcoesMenu.add(jLabel39);
         jLabel39.setBounds(250, 40, 37, 15);
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - casa.png"))); // NOI18N
-        jPanel7.add(jLabel41);
+        jLabel41.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel41MouseClicked(evt);
+            }
+        });
+        panelTelaLojaOpcoesMenu.add(jLabel41);
         jLabel41.setBounds(20, 0, 28, 30);
 
-        TelaLojaOpcoesPainelPrincipal.add(jPanel7);
-        jPanel7.setBounds(0, 450, 310, 60);
+        TelaLojaOpcoesPainelPrincipal.add(panelTelaLojaOpcoesMenu);
+        panelTelaLojaOpcoesMenu.setBounds(0, 450, 310, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -515,15 +558,48 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
     private void jLabel38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel38MouseClicked
         TelaPrincipalPerfil TelaPerfil = new TelaPrincipalPerfil();
         
-        TelaPerfil.setSize(310, 510);
+        TelaPerfil.panelPerfilConteudo.setSize(310, 450);
+        panelTelaLojaOpcoesMenu.setSize(310, 60);
         TelaPerfil.setLocation(0, 0);
-        
+        panelTelaLojaOpcoesMenu.setLocation(0, 450);
         
         panelTelaInicialBase.removeAll();
-        panelTelaInicialBase.add(TelaPerfil, BorderLayout.CENTER);
+        panelTelaInicialBase.add(TelaPerfil.panelPerfilConteudo, BorderLayout.CENTER);
+        panelTelaInicialBase.add(panelTelaLojaOpcoesMenu, BorderLayout.CENTER);
         panelTelaInicialBase.revalidate();
         panelTelaInicialBase.repaint();
     }//GEN-LAST:event_jLabel38MouseClicked
+
+    private void jLabel41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel41MouseClicked
+        panelConteudoLojaOpcoes.setSize(310, 450);
+        panelTelaLojaOpcoesMenu.setSize(310, 60);
+        panelConteudoLojaOpcoes.setLocation(0, 0);
+        panelTelaLojaOpcoesMenu.setLocation(0, 450);
+
+        
+        panelTelaInicialBase.removeAll();
+        panelTelaInicialBase.add(panelConteudoLojaOpcoes, BorderLayout.CENTER);
+        panelTelaInicialBase.add(panelTelaLojaOpcoesMenu, BorderLayout.CENTER);
+        panelTelaInicialBase.revalidate();
+        panelTelaInicialBase.repaint();
+    }//GEN-LAST:event_jLabel41MouseClicked
+
+    private void jLabel36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel36MouseClicked
+        TelaPrincipalCarrinho Carrinho = new TelaPrincipalCarrinho();
+        
+        Carrinho.panelTelaCarrinho.setSize(310, 450);
+        panelTelaLojaOpcoesMenu.setSize(310, 60);
+        panelTelaLojaOpcoesMenu.setLocation(0, 450);
+        Carrinho.panelTelaCarrinho.setLocation(0, 450);
+        
+        
+        panelTelaInicialBase.removeAll();
+        panelTelaInicialBase.add(Carrinho.panelTelaCarrinho, BorderLayout.CENTER);
+        panelTelaInicialBase.add(panelTelaLojaOpcoesMenu, BorderLayout.CENTER);
+        panelTelaInicialBase.revalidate();
+        panelTelaInicialBase.repaint();
+        
+    }//GEN-LAST:event_jLabel36MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -574,10 +650,11 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JPanel panelConteudoLojaOpcoes;
+    private javax.swing.JPanel panelTelaLojaOpcoesMenu;
     // End of variables declaration//GEN-END:variables
 }
