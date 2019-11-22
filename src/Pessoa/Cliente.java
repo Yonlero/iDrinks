@@ -1,5 +1,7 @@
 package Pessoa;
 
+import Pedido.Pedido;
+
 
 public class Cliente{
     //------------------------Atributos Comum para todos Cliente-----------------------------
@@ -9,6 +11,7 @@ public class Cliente{
     private String Telefone;
     private String DataNascimento;
     private Endereco EnderecoPessoa;
+    private Pedido Historico;
     //------------------------Começando os Metodos GET de todos esses atributos--------------
 
     public String getNome() { // Retornando o Nome
@@ -76,5 +79,9 @@ public class Cliente{
     public Cliente() {
     }
     
+    
+    public boolean realizarPagamento(){
+        return true;
+    }
     
 }
