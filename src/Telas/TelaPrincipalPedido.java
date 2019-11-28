@@ -35,12 +35,12 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblTelaPedidoNomeProduto = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         quantidade = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnTelaPedidoSubtrair = new javax.swing.JButton();
+        btnTelaPedidoAdicionar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton7 = new javax.swing.JButton();
@@ -91,7 +91,7 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/cerveja-produto.png"))); // NOI18N
 
-        jLabel3.setText("Budweiser");
+        lblTelaPedidoNomeProduto.setText("Budweiser");
 
         jLabel4.setForeground(new java.awt.Color(70, 70, 70));
         jLabel4.setText("Long Neck 330 mL");
@@ -106,25 +106,25 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
         quantidade.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         quantidade.setText("1");
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 204, 0));
-        jButton4.setText("-");
-        jButton4.setContentAreaFilled(false);
-        jButton4.setOpaque(true);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnTelaPedidoSubtrair.setBackground(new java.awt.Color(255, 255, 255));
+        btnTelaPedidoSubtrair.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnTelaPedidoSubtrair.setForeground(new java.awt.Color(255, 204, 0));
+        btnTelaPedidoSubtrair.setText("-");
+        btnTelaPedidoSubtrair.setContentAreaFilled(false);
+        btnTelaPedidoSubtrair.setOpaque(true);
+        btnTelaPedidoSubtrair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnTelaPedidoSubtrairActionPerformed(evt);
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 204, 0));
-        jButton5.setText("+");
-        jButton5.setContentAreaFilled(false);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnTelaPedidoAdicionar.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnTelaPedidoAdicionar.setForeground(new java.awt.Color(255, 204, 0));
+        btnTelaPedidoAdicionar.setText("+");
+        btnTelaPedidoAdicionar.setContentAreaFilled(false);
+        btnTelaPedidoAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnTelaPedidoAdicionarActionPerformed(evt);
             }
         });
 
@@ -161,8 +161,8 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(valorTotal)
                 .addContainerGap())
         );
@@ -183,7 +183,7 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
                 .addGroup(panelTelaPrincipalPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelTelaPrincipalPedidoLayout.createSequentialGroup()
                         .addGap(32, 32, 32)
-                        .addComponent(jButton4)
+                        .addComponent(btnTelaPedidoSubtrair)
                         .addGap(61, 61, 61)
                         .addComponent(quantidade)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -193,7 +193,7 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
             .addGroup(panelTelaPrincipalPedidoLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(panelTelaPrincipalPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton5)
+                    .addComponent(btnTelaPedidoAdicionar)
                     .addGroup(panelTelaPrincipalPedidoLayout.createSequentialGroup()
                         .addGroup(panelTelaPrincipalPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -203,9 +203,9 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelTelaPrincipalPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel3)
+                            .addComponent(lblTelaPedidoNomeProduto)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelTelaPrincipalPedidoLayout.setVerticalGroup(
             panelTelaPrincipalPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -214,7 +214,7 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
                 .addGroup(panelTelaPrincipalPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelTelaPrincipalPedidoLayout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(jLabel3)
+                        .addComponent(lblTelaPedidoNomeProduto)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel4))
                     .addGroup(panelTelaPrincipalPedidoLayout.createSequentialGroup()
@@ -227,8 +227,8 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelTelaPrincipalPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(quantidade)
-                    .addComponent(jButton5)
-                    .addComponent(jButton4))
+                    .addComponent(btnTelaPedidoAdicionar)
+                    .addComponent(btnTelaPedidoSubtrair))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
@@ -248,7 +248,7 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnTelaPedidoSubtrairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaPedidoSubtrairActionPerformed
         // TODO add your handling code here:
         int quant;
         float total;
@@ -260,9 +260,9 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
 
         quantidade.setText(String.valueOf(quant));
         valorTotal.setText("R$ " + String.valueOf(total));
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnTelaPedidoSubtrairActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnTelaPedidoAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaPedidoAdicionarActionPerformed
         // TODO add your handling code here:
         int quant;
         float total;
@@ -276,7 +276,7 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
         quantidade.setText(String.valueOf(quant));
         valorTotal.setText("R$ " + String.valueOf(total));
 
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnTelaPedidoAdicionarActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -297,20 +297,20 @@ public class TelaPrincipalPedido extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnTelaPedidoAdicionar;
+    private javax.swing.JButton btnTelaPedidoSubtrair;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JLabel lblTelaPedidoNomeProduto;
     public javax.swing.JPanel panelTelaPrincipalPedido;
     private javax.swing.JLabel quantidade;
     private javax.swing.JLabel valorTotal;

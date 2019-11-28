@@ -457,7 +457,7 @@ public class TelaLojaOpcoes extends javax.swing.JPanel {
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icones - lupa.png"))); // NOI18N
         panelTelaLojaOpcoesMenu.add(jLabel14);
-        jLabel14.setBounds(100, 0, 30, 30);
+        jLabel14.setBounds(90, 0, 30, 30);
 
         jLabel29.setText("Busca");
         panelTelaLojaOpcoesMenu.add(jLabel29);

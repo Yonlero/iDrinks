@@ -12,6 +12,7 @@ public class Cliente{
     private String DataNascimento;
     private Endereco EnderecoPessoa;
     private Pedido Historico;
+    private String Senha;
     //------------------------Começando os Metodos GET de todos esses atributos--------------
 
     public String getNome() { // Retornando o Nome
@@ -38,6 +39,16 @@ public class Cliente{
         return EnderecoPessoa;
     }
 
+    public Pedido getHistorico() {
+        return Historico;
+    }
+
+    public String getSenha() {
+        return Senha;
+    }
+    
+    
+
     //-----------------------Começando os metodos SET de todos esses atributos-----------------
 
     public void setNome(String Nome) {
@@ -63,6 +74,16 @@ public class Cliente{
     public void setEnderecoPessoa(Endereco EnderecoPessoa) {
         this.EnderecoPessoa = EnderecoPessoa;
     }
+
+    public void setHistorico(Pedido Historico) {
+        this.Historico = Historico;
+    }
+
+    public void setSenha(String Senha) {
+        this.Senha = Senha;
+    }
+    
+    
     
     //-----------------------Criando um construtor sem o endereco pois o mesmo sera adicionado posteriormente---------------
 
