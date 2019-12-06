@@ -10,6 +10,7 @@ import static Telas.TelaInicial.panelTelaInicialBase;
 import Telas.TelaCadastroEndereco;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,6 +27,19 @@ public class TelaLogin extends javax.swing.JPanel {
     }
 
     public TelaCadastroEndereco TelaEd = new TelaCadastroEndereco();
+    //Criando ArrayList
+    public  ArrayList<Cliente> usu = new ArrayList<Cliente>();
+    
+    //Funcao que cadastra o cliente
+    public  boolean AdicionarUsr(Cliente Usr){
+        if(usu.add(Usr) == true){
+            
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -103,33 +117,27 @@ public class TelaLogin extends javax.swing.JPanel {
         int auxEmail = -1;
         int auxSenha = -1;
         int Id = 0;
-        int Veri = 0;
-        
-        for(int i = 0; i < TelaEd.numUsr; i++){
-            if(txtTelaLoginEmail.equals(TelaEd.usu.get(i).getEmail())){
+        int Veri = 0;   
+        if(usu.size() > 0){
+            for(int i = 0; i <= usu.size(); i++){
+            if(txtTelaLoginEmail.equals(usu.get(i).getEmail())){
                 auxEmail = i;
-                Id = i;
+         
             }
         }
         
-        for(int i = 0; i < TelaEd.numUsr; i++){
-            if(pfTelaLoginSenha.equals(TelaEd.usu.get(i).getSenha())){
+        for(int i = 0; i <= usu.size(); i++){
+            if(pfTelaLoginSenha.equals(usu.get(auxEmail).getSenha())){
                 auxSenha = auxEmail;
             }
         }
         
-        for(int i = 0; i < TelaEd.usu.size(); i++){
-            JOptionPane.showMessageDialog(null, TelaEd.usu.get(Id).getEmail() + "" + TelaEd.usu.get(Id).getSenha());
         
-        }
-        
-        JOptionPane.showMessageDialog(null, txtTelaLoginEmail.getText() + "" + pfTelaLoginSenha.getText());
-        
-        for(int i = 0; i < TelaEd.numUsr; i++){
-            if(auxEmail != -1 && auxSenha != -1){
+        for(int i = 0; i <= usu.size(); i++){
+            if(auxEmail != -1 && auxSenha != -1 && auxEmail == auxSenha && usu.get(auxEmail) != null){
                 Id = auxEmail;
                 JOptionPane.showMessageDialog(null, "Login efetuado com Sucesso!!!");
-                JOptionPane.showMessageDialog(null, "Bem vindo" + TelaEd.usu.get(Id).getNome());
+                JOptionPane.showMessageDialog(null, "Bem vindo" + usu.get(Id).getNome());
                 
                 TelaLojaOpcoes LojaOpcoes = new TelaLojaOpcoes();
 
@@ -150,6 +158,10 @@ public class TelaLogin extends javax.swing.JPanel {
             txtTelaLoginEmail.setText("");
             pfTelaLoginSenha.setText("");
         }
+        }else{
+        JOptionPane.showMessageDialog(null, "Surprise");
+        }
+        
        
     }//GEN-LAST:event_btnTelaLoginEntrarActionPerformed
 

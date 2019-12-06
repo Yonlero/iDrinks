@@ -25,12 +25,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
     }
  
     
-    public String ConfirmandoNome;
-    public String NomeCadastro;
-    public String Email;
-    public String CPF;
-    public String Telefone;
-    public String DataNascimento;
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -262,18 +257,18 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
         //==================================FIM DA CHAMADA DA TELA DE ENDERECO==============================
         
         //=================================ATRIBUINDO VALORES AS VARIAVEIS E CRIANDO O CLIENTE==============
-        NomeCadastro = txtTelaCadastroNome.getText();
-        Email = txtTelaCadastroEmail.getText();
-        CPF = txtTelaCadastroEmail.getText();
-        Telefone = txtTelaCadastroTelefone.getText();
-        DataNascimento = txtTelaCadastroEmail.getText();
+        TelaCadastroEndereco.NomeCadastro = txtTelaCadastroNome.getText();
+        TelaCadastroEndereco.Email = txtTelaCadastroEmail.getText();
+        TelaCadastroEndereco.CPF = txtTelaCadastroEmail.getText();
+        TelaCadastroEndereco.Telefone = txtTelaCadastroTelefone.getText();
+        TelaCadastroEndereco.DataNascimento = txtTelaCadastroEmail.getText();
+        TelaCadastroEndereco.Senha = pfTelaCadastroDadosPessoaisSenha.getText();
         
         //Já que não estamos usando banco vamos simular um com o array list
         //Ae uma coisinha sobre ArrayList, oque eu to fazendo e o seguinte: to criando uma posição no array chamado Clientes
         //Essa "POSIÇÃO" já e o objeto e ele ja pode receber todos esse parametros que eu especifiquei pelo construtor
         //Esse NEW quer dizer que to criando um novo cliente e ele ja vai possuir tudo isso dai
         
-        ConfirmandoNome = NomeCadastro;
         
         
     }//GEN-LAST:event_btnTelaCadastroEnderecoCadastrarActionPerformed

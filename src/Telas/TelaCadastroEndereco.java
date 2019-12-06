@@ -30,19 +30,14 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
     
     
     static int numUsr = 0;
-    //Criando ArrayList
-    public static ArrayList<Cliente> usu = new ArrayList<>();
     
-    //Funcao que cadastra o cliente
-    public static boolean AdicionarUsr(Cliente Usr){
-        if(usu.add(Usr) == true){
-            numUsr = numUsr + 1;
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+    
+    public String Senha;
+    public String NomeCadastro;
+    public String Email;
+    public String CPF;
+    public String Telefone;
+    public String DataNascimento;
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -168,17 +163,15 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
         TelaCadastroDadosPessoais DadosPessoais = new TelaCadastroDadosPessoais();
         
         //---------------------------------------------Criando um objeto cliente e adicionando seus valores--------------------------------
-        Cliente Usuario = new Cliente(DadosPessoais.txtTelaCadastroNome.getText(), DadosPessoais.txtTelaCadastroCPF.getText(), DadosPessoais.txtTelaCadastroEmail.getText(),
-        DadosPessoais.txtTelaCadastroTelefone.getText(), DadosPessoais.txtTelaCadastroDadosPessoaisDataNascimento.getText(), 
-        DadosPessoais.pfTelaCadastroDadosPessoaisSenha.getText());
+        Cliente Usuario = new Cliente(NomeCadastro, CPF, Email,
+        Telefone, DataNascimento, Senha);
  
         //---------------------------------------------Atribuindo um endereco ao cliente
         Endereco EnderecoCliente = new Endereco(txtTelaCadastroEnderecoRua1.getText(), txtTelaCadastroEnderecoBairro.getText(), txtTelaCadastroEnderecoCEP.getText(), txtTelaCadastroEnderecoCidade.getText());
         Usuario.setEnderecoPessoa(EnderecoCliente);
        
         //--------------------------------------------Adicionando o cliente ao "Banco"--------------------------------
-        if(AdicionarUsr(Usuario) == true){
-            
+        if(TelaLog.AdicionarUsr(Usuario) == true){
             JOptionPane.showMessageDialog(null, "Usuario Cadastrado com Sucesso");
             
             txtTelaCadastroEnderecoBairro.setText("");
@@ -187,7 +180,7 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
             txtTelaCadastroEnderecoComplemento.setText("");
             txtTelaCadastroEnderecoRua1.setText("");
             
-           JOptionPane.showMessageDialog(null, usu.get(0).getEmail() + "" + usu.get(0).getSenha());
+           
             JOptionPane.showMessageDialog(null, "Indo para a area de login");
             
             TelaLog.setSize(310, 510);
