@@ -29,8 +29,8 @@ public class Lojas {
         
     }
     
-    public Lojas buscarEstabelecimento(String nome){
+   // public Lojas buscarEstabelecimento(String nome){
         
         
-    }
+    //}
 }

@@ -82,6 +82,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        txtTelaCadastroCPF.setText("");
         panelTelaCadastroCPF.add(txtTelaCadastroCPF);
         txtTelaCadastroCPF.setBounds(10, 25, 270, 30);
 
@@ -108,6 +109,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        txtTelaCadastroDadosPessoaisDataNascimento.setText("");
         panelTelaCadastroDataNascimento.add(txtTelaCadastroDadosPessoaisDataNascimento);
         txtTelaCadastroDadosPessoaisDataNascimento.setBounds(10, 25, 270, 30);
 
@@ -124,6 +126,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        txtTelaCadastroTelefone.setText("");
         panelTelaCadastroTelefone.add(txtTelaCadastroTelefone);
         txtTelaCadastroTelefone.setBounds(10, 25, 270, 30);
 
@@ -222,52 +225,58 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTelaCadastroEnderecoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroEnderecoCadastrarActionPerformed
-        if(txtTelaCadastroCPF.equals("")){
+        if(txtTelaCadastroCPF.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Preencha o campo CPF");
+        }else{
+             if(txtTelaCadastroDadosPessoaisDataNascimento.getText().equals("")){
+                JOptionPane.showMessageDialog(null, "Preencha o campo Data de Nascimento");
+            }else{
+                 if(txtTelaCadastroEmail.getText().equals("")){
+                    JOptionPane.showMessageDialog(null, "Preencha o campo E-mail");
+                }else{
+                     if(txtTelaCadastroNome.getText().equals("")){
+                        JOptionPane.showMessageDialog(null, "Preencha o campo Nome");
+                    }else{
+                          if(txtTelaCadastroTelefone.getText().equals("")){
+                            JOptionPane.showMessageDialog(null, "Preencha o campo Telefone");
+                        }else{
+                              if(pfTelaCadastroDadosPessoaisSenha.getText().equals("")){
+                                  JOptionPane.showMessageDialog(null, "Preencha o campo Senha");
+                              }else{
+                                  //===================================CHAMANDO A TELA DE CADASTRO DE ENDERECO=========================
+                                TelaCadastroEndereco TelaCadastroEndereco = new TelaCadastroEndereco();
+                                Cliente Cadastra = new Cliente();
+
+                                TelaCadastroEndereco.setSize(310, 510);
+                                TelaCadastroEndereco.setLocation(0, 0);
+
+
+                                panelTelaInicialBase.removeAll();
+                                panelTelaInicialBase.add(TelaCadastroEndereco, BorderLayout.CENTER);
+                                panelTelaInicialBase.revalidate();
+                                panelTelaInicialBase.repaint();
+
+                                //==================================FIM DA CHAMADA DA TELA DE ENDERECO==============================
+
+                                //=================================ATRIBUINDO VALORES AS VARIAVEIS E CRIANDO O CLIENTE==============
+                                TelaCadastroEndereco.NomeCadastro = txtTelaCadastroNome.getText();
+                                TelaCadastroEndereco.Email = txtTelaCadastroEmail.getText();
+                                TelaCadastroEndereco.CPF = txtTelaCadastroEmail.getText();
+                                TelaCadastroEndereco.Telefone = txtTelaCadastroTelefone.getText();
+                                TelaCadastroEndereco.DataNascimento = txtTelaCadastroEmail.getText();
+                                TelaCadastroEndereco.Senha = pfTelaCadastroDadosPessoaisSenha.getText();
+
+                                //Já que não estamos usando banco vamos simular um com o array list
+                                //Ae uma coisinha sobre ArrayList, oque eu to fazendo e o seguinte: to criando uma posição no array chamado Clientes
+                                //Essa "POSIÇÃO" já e o objeto e ele ja pode receber todos esse parametros que eu especifiquei pelo construtor
+                                //Esse NEW quer dizer que to criando um novo cliente e ele ja vai possuir tudo isso dai
+                              }
+                          }
+                     }
+                 }
+             }
         }
         
-        if(txtTelaCadastroDadosPessoaisDataNascimento.equals("")){
-            JOptionPane.showMessageDialog(null, "Preencha o campo Data de Nascimento");
-        }
-        
-        if(txtTelaCadastroEmail.equals("")){
-            JOptionPane.showMessageDialog(null, "Preencha o campo E-mail");
-        }
-        
-        if(txtTelaCadastroNome.equals("")){
-            JOptionPane.showMessageDialog(null, "Preencha o campo Nomel");
-        }
-        
-        if(txtTelaCadastroTelefone.equals("")){
-            JOptionPane.showMessageDialog(null, "Preencha o campo Telefone");
-        }
-        //===================================CHAMANDO A TELA DE CADASTRO DE ENDERECO=========================
-        TelaCadastroEndereco TelaCadastroEndereco = new TelaCadastroEndereco();
-        Cliente Cadastra = new Cliente();
-        
-        TelaCadastroEndereco.setSize(310, 510);
-        TelaCadastroEndereco.setLocation(0, 0);
-        
-        
-        panelTelaInicialBase.removeAll();
-        panelTelaInicialBase.add(TelaCadastroEndereco, BorderLayout.CENTER);
-        panelTelaInicialBase.revalidate();
-        panelTelaInicialBase.repaint();
-        
-        //==================================FIM DA CHAMADA DA TELA DE ENDERECO==============================
-        
-        //=================================ATRIBUINDO VALORES AS VARIAVEIS E CRIANDO O CLIENTE==============
-        TelaCadastroEndereco.NomeCadastro = txtTelaCadastroNome.getText();
-        TelaCadastroEndereco.Email = txtTelaCadastroEmail.getText();
-        TelaCadastroEndereco.CPF = txtTelaCadastroEmail.getText();
-        TelaCadastroEndereco.Telefone = txtTelaCadastroTelefone.getText();
-        TelaCadastroEndereco.DataNascimento = txtTelaCadastroEmail.getText();
-        TelaCadastroEndereco.Senha = pfTelaCadastroDadosPessoaisSenha.getText();
-        
-        //Já que não estamos usando banco vamos simular um com o array list
-        //Ae uma coisinha sobre ArrayList, oque eu to fazendo e o seguinte: to criando uma posição no array chamado Clientes
-        //Essa "POSIÇÃO" já e o objeto e ele ja pode receber todos esse parametros que eu especifiquei pelo construtor
-        //Esse NEW quer dizer que to criando um novo cliente e ele ja vai possuir tudo isso dai
         
         
         

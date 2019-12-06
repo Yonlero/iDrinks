@@ -31,9 +31,10 @@ public class TelaLogin extends javax.swing.JPanel {
     public  ArrayList<Cliente> usu = new ArrayList<Cliente>();
     
     //Funcao que cadastra o cliente
+    int numUsr = 0;
     public  boolean AdicionarUsr(Cliente Usr){
+        numUsr++;
         if(usu.add(Usr) == true){
-            
             return true;
         }
         else{
@@ -78,6 +79,7 @@ public class TelaLogin extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(30, 60, 80, 83);
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("E-mail");
         add(jLabel7);
         jLabel7.setBounds(20, 180, 60, 14);
@@ -86,9 +88,10 @@ public class TelaLogin extends javax.swing.JPanel {
         add(txtTelaLoginEmail);
         txtTelaLoginEmail.setBounds(16, 200, 260, 30);
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Senha");
         add(jLabel4);
-        jLabel4.setBounds(20, 260, 36, 14);
+        jLabel4.setBounds(20, 260, 40, 14);
 
         pfTelaLoginSenha.setBorder(null);
         add(pfTelaLoginSenha);
@@ -113,31 +116,32 @@ public class TelaLogin extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTelaLoginEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaLoginEntrarActionPerformed
-
+/*
         int auxEmail = -1;
         int auxSenha = -1;
         int Id = 0;
         int Veri = 0;   
-        if(usu.size() > 0){
+        
             for(int i = 0; i <= usu.size(); i++){
-            if(txtTelaLoginEmail.equals(usu.get(i).getEmail())){
+            if(txtTelaLoginEmail.getText().equals(usu.get(i).getEmail())){
                 auxEmail = i;
          
             }
         }
         
         for(int i = 0; i <= usu.size(); i++){
-            if(pfTelaLoginSenha.equals(usu.get(auxEmail).getSenha())){
+            if(pfTelaLoginSenha.getText().equals(usu.get(auxEmail).getSenha())){
                 auxSenha = auxEmail;
             }
         }
         
         
         for(int i = 0; i <= usu.size(); i++){
-            if(auxEmail != -1 && auxSenha != -1 && auxEmail == auxSenha && usu.get(auxEmail) != null){
+            if(auxEmail != -1 && auxSenha != -1 && auxEmail == auxSenha){
                 Id = auxEmail;
+*/
                 JOptionPane.showMessageDialog(null, "Login efetuado com Sucesso!!!");
-                JOptionPane.showMessageDialog(null, "Bem vindo" + usu.get(Id).getNome());
+                JOptionPane.showMessageDialog(null, "Bem vindo " + usu.get(0).getNome());
                 
                 TelaLojaOpcoes LojaOpcoes = new TelaLojaOpcoes();
 
@@ -149,20 +153,17 @@ public class TelaLogin extends javax.swing.JPanel {
                 panelTelaInicialBase.add(LojaOpcoes, BorderLayout.CENTER);
                 panelTelaInicialBase.revalidate();
                 panelTelaInicialBase.repaint();
-                Veri = 1;
-            }
-        }
+              //  Veri = 1;
+            
         
-        if(Veri == 0){
+        
+       /* if(Veri == 0){
             JOptionPane.showMessageDialog(null, "Login ou Senha não encontrados");
             txtTelaLoginEmail.setText("");
             pfTelaLoginSenha.setText("");
         }
-        }else{
-        JOptionPane.showMessageDialog(null, "Surprise");
-        }
         
-       
+       */
     }//GEN-LAST:event_btnTelaLoginEntrarActionPerformed
 
 

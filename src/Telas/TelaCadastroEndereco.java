@@ -27,11 +27,6 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
         initComponents();
     }
     
-    
-    
-    static int numUsr = 0;
-    
-    
     public String Senha;
     public String NomeCadastro;
     public String Email;
@@ -191,7 +186,6 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
             panelTelaInicialBase.add(TelaLog, BorderLayout.CENTER);
             panelTelaInicialBase.revalidate();
             panelTelaInicialBase.repaint();
-            numUsr = numUsr + 1;
         }else{
             JOptionPane.showMessageDialog(null, "Houveram erros no cadastro");
             txtTelaCadastroEnderecoBairro.setText("");
