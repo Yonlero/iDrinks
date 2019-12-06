@@ -87,12 +87,13 @@ public class Cliente{
     
     //-----------------------Criando um construtor sem o endereco pois o mesmo sera adicionado posteriormente---------------
 
-    public Cliente(String Nome, String CPF, String Email, String Telefone, String DataNascimento) {
+    public Cliente(String Nome, String CPF, String Email, String Telefone, String DataNascimento, String Senha) {
         this.Nome = Nome;
         this.CPF = CPF;
         this.Email = Email;
         this.Telefone = Telefone;
         this.DataNascimento = DataNascimento;
+        this.Senha = Senha;
     }
     
     //----------------------Construtor Vazio Somente para inicializar estancias quaisquer

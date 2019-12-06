@@ -58,7 +58,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
         btnTelaCadastroEnderecoCadastrar = new javax.swing.JButton();
         panelTelaCadastroNome1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        txtTelaCadastroSenha = new javax.swing.JTextField();
+        pfTelaCadastroDadosPessoaisSenha = new javax.swing.JPasswordField();
         panelTelaCadastroNome = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         txtTelaCadastroNome = new javax.swing.JTextField();
@@ -88,7 +88,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
             ex.printStackTrace();
         }
         panelTelaCadastroCPF.add(txtTelaCadastroCPF);
-        txtTelaCadastroCPF.setBounds(10, 25, 270, 20);
+        txtTelaCadastroCPF.setBounds(10, 25, 270, 30);
 
         panelTelaCadastroEmail.setBackground(new java.awt.Color(255, 255, 255));
         panelTelaCadastroEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -98,7 +98,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
         panelTelaCadastroEmail.add(jLabel6);
         jLabel6.setBounds(10, 10, 50, 14);
         panelTelaCadastroEmail.add(txtTelaCadastroEmail);
-        txtTelaCadastroEmail.setBounds(10, 25, 270, 20);
+        txtTelaCadastroEmail.setBounds(10, 25, 270, 30);
 
         panelTelaCadastroDataNascimento.setBackground(new java.awt.Color(255, 255, 255));
         panelTelaCadastroDataNascimento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -114,7 +114,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
             ex.printStackTrace();
         }
         panelTelaCadastroDataNascimento.add(txtTelaCadastroDadosPessoaisDataNascimento);
-        txtTelaCadastroDadosPessoaisDataNascimento.setBounds(10, 25, 270, 20);
+        txtTelaCadastroDadosPessoaisDataNascimento.setBounds(10, 25, 270, 30);
 
         panelTelaCadastroTelefone.setBackground(new java.awt.Color(255, 255, 255));
         panelTelaCadastroTelefone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -130,7 +130,7 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
             ex.printStackTrace();
         }
         panelTelaCadastroTelefone.add(txtTelaCadastroTelefone);
-        txtTelaCadastroTelefone.setBounds(10, 25, 270, 20);
+        txtTelaCadastroTelefone.setBounds(10, 25, 270, 30);
 
         btnTelaCadastroEnderecoCadastrar.setBackground(new java.awt.Color(255, 255, 0));
         btnTelaCadastroEnderecoCadastrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -149,9 +149,9 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
 
         jLabel9.setText("Senha");
         panelTelaCadastroNome1.add(jLabel9);
-        jLabel9.setBounds(10, 10, 30, 14);
-        panelTelaCadastroNome1.add(txtTelaCadastroSenha);
-        txtTelaCadastroSenha.setBounds(10, 25, 270, 20);
+        jLabel9.setBounds(10, 10, 60, 14);
+        panelTelaCadastroNome1.add(pfTelaCadastroDadosPessoaisSenha);
+        pfTelaCadastroDadosPessoaisSenha.setBounds(10, 30, 270, 25);
 
         panelTelaCadastroNome.setBackground(new java.awt.Color(255, 255, 255));
         panelTelaCadastroNome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -159,16 +159,32 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
 
         jLabel4.setText("Nome");
         panelTelaCadastroNome.add(jLabel4);
-        jLabel4.setBounds(10, 10, 28, 14);
+        jLabel4.setBounds(10, 10, 50, 14);
         panelTelaCadastroNome.add(txtTelaCadastroNome);
-        txtTelaCadastroNome.setBounds(10, 25, 270, 20);
+        txtTelaCadastroNome.setBounds(10, 25, 270, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(btnTelaCadastroEnderecoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(panelTelaCadastroNome, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,25 +194,10 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(panelTelaCadastroEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(panelTelaCadastroNome1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(45, 45, 45)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(btnTelaCadastroEnderecoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(panelTelaCadastroNome, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(panelTelaCadastroNome1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel2)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -204,29 +205,47 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelTelaCadastroNome, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelTelaCadastroNome, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelTelaCadastroEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelTelaCadastroEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelTelaCadastroCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelTelaCadastroCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelTelaCadastroTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelTelaCadastroTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelTelaCadastroDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelTelaCadastroNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnTelaCadastroEnderecoCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(panelTelaCadastroDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelTelaCadastroNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnTelaCadastroEnderecoCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTelaCadastroEnderecoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroEnderecoCadastrarActionPerformed
+        if(txtTelaCadastroCPF.equals("")){
+            JOptionPane.showMessageDialog(null, "Preencha o campo CPF");
+        }
+        
+        if(txtTelaCadastroDadosPessoaisDataNascimento.equals("")){
+            JOptionPane.showMessageDialog(null, "Preencha o campo Data de Nascimento");
+        }
+        
+        if(txtTelaCadastroEmail.equals("")){
+            JOptionPane.showMessageDialog(null, "Preencha o campo E-mail");
+        }
+        
+        if(txtTelaCadastroNome.equals("")){
+            JOptionPane.showMessageDialog(null, "Preencha o campo Nomel");
+        }
+        
+        if(txtTelaCadastroTelefone.equals("")){
+            JOptionPane.showMessageDialog(null, "Preencha o campo Telefone");
+        }
         //===================================CHAMANDO A TELA DE CADASTRO DE ENDERECO=========================
         TelaCadastroEndereco TelaCadastroEndereco = new TelaCadastroEndereco();
         Cliente Cadastra = new Cliente();
@@ -277,11 +296,11 @@ public class TelaCadastroDadosPessoais extends javax.swing.JPanel {
     private javax.swing.JPanel panelTelaCadastroNome;
     private javax.swing.JPanel panelTelaCadastroNome1;
     private javax.swing.JPanel panelTelaCadastroTelefone;
+    public javax.swing.JPasswordField pfTelaCadastroDadosPessoaisSenha;
     public javax.swing.JFormattedTextField txtTelaCadastroCPF;
     public javax.swing.JFormattedTextField txtTelaCadastroDadosPessoaisDataNascimento;
     public javax.swing.JTextField txtTelaCadastroEmail;
     public javax.swing.JTextField txtTelaCadastroNome;
-    public javax.swing.JTextField txtTelaCadastroSenha;
     public javax.swing.JFormattedTextField txtTelaCadastroTelefone;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,8 +5,12 @@
  */
 package Telas;
 
+import Pessoa.Cliente;
 import static Telas.TelaInicial.panelTelaInicialBase;
+import Telas.TelaCadastroEndereco;
 import java.awt.BorderLayout;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -21,6 +25,8 @@ public class TelaLogin extends javax.swing.JPanel {
         initComponents();
     }
 
+    public TelaCadastroEndereco TelaEd = new TelaCadastroEndereco();
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,13 +39,11 @@ public class TelaLogin extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnTelaLoginEntrar = new javax.swing.JButton();
-        panelTelaLoginEmail = new javax.swing.JPanel();
-        txtTelaLoginEmail = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        panelTelaLoginSenha = new javax.swing.JPanel();
+        txtTelaLoginEmail = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         pfTelaLoginSenha = new javax.swing.JPasswordField();
+        btnTelaLoginEntrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(null);
@@ -60,6 +64,22 @@ public class TelaLogin extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(30, 60, 80, 83);
 
+        jLabel7.setText("E-mail");
+        add(jLabel7);
+        jLabel7.setBounds(20, 180, 60, 14);
+
+        txtTelaLoginEmail.setBorder(null);
+        add(txtTelaLoginEmail);
+        txtTelaLoginEmail.setBounds(16, 200, 260, 30);
+
+        jLabel4.setText("Senha");
+        add(jLabel4);
+        jLabel4.setBounds(20, 260, 36, 14);
+
+        pfTelaLoginSenha.setBorder(null);
+        add(pfTelaLoginSenha);
+        pfTelaLoginSenha.setBounds(20, 280, 260, 30);
+
         btnTelaLoginEntrar.setBackground(new java.awt.Color(255, 255, 0));
         btnTelaLoginEntrar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnTelaLoginEntrar.setText("ENTRAR");
@@ -73,67 +93,64 @@ public class TelaLogin extends javax.swing.JPanel {
         add(btnTelaLoginEntrar);
         btnTelaLoginEntrar.setBounds(30, 390, 250, 40);
 
-        panelTelaLoginEmail.setBackground(new java.awt.Color(255, 255, 255));
-        panelTelaLoginEmail.setBorder(null);
-        panelTelaLoginEmail.setLayout(null);
-
-        txtTelaLoginEmail.setBorder(null);
-        panelTelaLoginEmail.add(txtTelaLoginEmail);
-        txtTelaLoginEmail.setBounds(10, 20, 256, 30);
-
-        jLabel7.setText("E-mail");
-        panelTelaLoginEmail.add(jLabel7);
-        jLabel7.setBounds(10, 0, 42, 15);
-
-        add(panelTelaLoginEmail);
-        panelTelaLoginEmail.setBounds(10, 180, 280, 50);
-
-        panelTelaLoginSenha.setBackground(new java.awt.Color(255, 255, 255));
-        panelTelaLoginSenha.setBorder(null);
-
-        jLabel4.setText("Senha");
-
-        pfTelaLoginSenha.setBorder(null);
-
-        javax.swing.GroupLayout panelTelaLoginSenhaLayout = new javax.swing.GroupLayout(panelTelaLoginSenha);
-        panelTelaLoginSenha.setLayout(panelTelaLoginSenhaLayout);
-        panelTelaLoginSenhaLayout.setHorizontalGroup(
-            panelTelaLoginSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTelaLoginSenhaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panelTelaLoginSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(pfTelaLoginSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelTelaLoginSenhaLayout.setVerticalGroup(
-            panelTelaLoginSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTelaLoginSenhaLayout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addComponent(pfTelaLoginSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        add(panelTelaLoginSenha);
-        panelTelaLoginSenha.setBounds(10, 250, 280, 50);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/FundoTelaLogin.png"))); // NOI18N
         add(jLabel1);
         jLabel1.setBounds(0, -20, 310, 550);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTelaLoginEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaLoginEntrarActionPerformed
-        TelaLojaOpcoes LojaOpcoes = new TelaLojaOpcoes();
+
+        int auxEmail = -1;
+        int auxSenha = -1;
+        int Id = 0;
+        int Veri = 0;
         
-        LojaOpcoes.setSize(310, 510);
-        LojaOpcoes.setLocation(0, 0);
+        for(int i = 0; i < TelaEd.numUsr; i++){
+            if(txtTelaLoginEmail.equals(TelaEd.usu.get(i).getEmail())){
+                auxEmail = i;
+                Id = i;
+            }
+        }
         
+        for(int i = 0; i < TelaEd.numUsr; i++){
+            if(pfTelaLoginSenha.equals(TelaEd.usu.get(i).getSenha())){
+                auxSenha = auxEmail;
+            }
+        }
         
-        panelTelaInicialBase.removeAll();
-        panelTelaInicialBase.add(LojaOpcoes, BorderLayout.CENTER);
-        panelTelaInicialBase.revalidate();
-        panelTelaInicialBase.repaint();
+        for(int i = 0; i < TelaEd.usu.size(); i++){
+            JOptionPane.showMessageDialog(null, TelaEd.usu.get(Id).getEmail() + "" + TelaEd.usu.get(Id).getSenha());
+        
+        }
+        
+        JOptionPane.showMessageDialog(null, txtTelaLoginEmail.getText() + "" + pfTelaLoginSenha.getText());
+        
+        for(int i = 0; i < TelaEd.numUsr; i++){
+            if(auxEmail != -1 && auxSenha != -1){
+                Id = auxEmail;
+                JOptionPane.showMessageDialog(null, "Login efetuado com Sucesso!!!");
+                JOptionPane.showMessageDialog(null, "Bem vindo" + TelaEd.usu.get(Id).getNome());
+                
+                TelaLojaOpcoes LojaOpcoes = new TelaLojaOpcoes();
+
+                LojaOpcoes.setSize(310, 510);
+                LojaOpcoes.setLocation(0, 0);
+
+
+                panelTelaInicialBase.removeAll();
+                panelTelaInicialBase.add(LojaOpcoes, BorderLayout.CENTER);
+                panelTelaInicialBase.revalidate();
+                panelTelaInicialBase.repaint();
+                Veri = 1;
+            }
+        }
+        
+        if(Veri == 0){
+            JOptionPane.showMessageDialog(null, "Login ou Senha não encontrados");
+            txtTelaLoginEmail.setText("");
+            pfTelaLoginSenha.setText("");
+        }
+       
     }//GEN-LAST:event_btnTelaLoginEntrarActionPerformed
 
 
@@ -145,8 +162,6 @@ public class TelaLogin extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel panelTelaLoginEmail;
-    private javax.swing.JPanel panelTelaLoginSenha;
     private javax.swing.JPasswordField pfTelaLoginSenha;
     private javax.swing.JTextField txtTelaLoginEmail;
     // End of variables declaration//GEN-END:variables

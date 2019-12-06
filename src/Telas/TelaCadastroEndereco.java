@@ -10,6 +10,9 @@ import Pessoa.Endereco;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import Telas.TelaCadastroDadosPessoais;
+import static Telas.TelaInicial.panelTelaInicialBase;
+import java.awt.BorderLayout;
+import jdk.nashorn.internal.scripts.JO;
 /**
  *
  * @author void
@@ -23,8 +26,23 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
     public TelaCadastroEndereco() {
         initComponents();
     }
-    int a = 0;
-    ArrayList<Cliente> Clientes = new ArrayList<>();
+    
+    
+    
+    static int numUsr = 0;
+    //Criando ArrayList
+    public static ArrayList<Cliente> usu = new ArrayList<>();
+    
+    //Funcao que cadastra o cliente
+    public static boolean AdicionarUsr(Cliente Usr){
+        if(usu.add(Usr) == true){
+            numUsr = numUsr + 1;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -59,12 +77,12 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
 
         jLabel1.setText("ENDEREÇO");
         add(jLabel1);
-        jLabel1.setBounds(110, 10, 80, 15);
+        jLabel1.setBounds(110, 10, 80, 14);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
         jLabel2.setText("Preencha corretamente os campus.");
         add(jLabel2);
-        jLabel2.setBounds(10, 50, 210, 13);
+        jLabel2.setBounds(10, 40, 210, 13);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -72,12 +90,12 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
 
         jLabel3.setText("Complemento");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(10, 10, 180, 15);
+        jLabel3.setBounds(10, 10, 180, 14);
         jPanel1.add(txtTelaCadastroEnderecoComplemento);
-        txtTelaCadastroEnderecoComplemento.setBounds(10, 30, 250, 19);
+        txtTelaCadastroEnderecoComplemento.setBounds(10, 30, 250, 34);
 
         add(jPanel1);
-        jPanel1.setBounds(10, 350, 280, 60);
+        jPanel1.setBounds(10, 380, 280, 70);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -85,12 +103,12 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
 
         jLabel4.setText("Rua, Travessa, Alameda");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(10, 10, 180, 15);
+        jLabel4.setBounds(10, 10, 180, 14);
         jPanel2.add(txtTelaCadastroEnderecoRua1);
-        txtTelaCadastroEnderecoRua1.setBounds(10, 30, 250, 20);
+        txtTelaCadastroEnderecoRua1.setBounds(10, 30, 250, 30);
 
         add(jPanel2);
-        jPanel2.setBounds(10, 70, 280, 60);
+        jPanel2.setBounds(10, 60, 280, 70);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -98,12 +116,12 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
 
         jLabel5.setText("Bairro");
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(10, 10, 180, 15);
+        jLabel5.setBounds(10, 10, 180, 14);
         jPanel3.add(txtTelaCadastroEnderecoBairro);
-        txtTelaCadastroEnderecoBairro.setBounds(10, 30, 250, 19);
+        txtTelaCadastroEnderecoBairro.setBounds(10, 30, 250, 34);
 
         add(jPanel3);
-        jPanel3.setBounds(10, 140, 280, 60);
+        jPanel3.setBounds(10, 140, 280, 70);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -111,12 +129,12 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
 
         jLabel6.setText("CEP");
         jPanel4.add(jLabel6);
-        jLabel6.setBounds(10, 10, 180, 15);
+        jLabel6.setBounds(10, 10, 180, 14);
         jPanel4.add(txtTelaCadastroEnderecoCEP);
-        txtTelaCadastroEnderecoCEP.setBounds(10, 30, 250, 19);
+        txtTelaCadastroEnderecoCEP.setBounds(10, 30, 250, 34);
 
         add(jPanel4);
-        jPanel4.setBounds(10, 210, 280, 60);
+        jPanel4.setBounds(10, 220, 280, 70);
 
         btnTelaCadastroEnderecoCadastro.setBackground(new java.awt.Color(255, 255, 0));
         btnTelaCadastroEnderecoCadastro.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -129,7 +147,7 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
             }
         });
         add(btnTelaCadastroEnderecoCadastro);
-        btnTelaCadastroEnderecoCadastro.setBounds(20, 430, 250, 40);
+        btnTelaCadastroEnderecoCadastro.setBounds(20, 460, 250, 30);
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -137,46 +155,59 @@ public class TelaCadastroEndereco extends javax.swing.JPanel {
 
         label7.setText("Cidade");
         jPanel5.add(label7);
-        label7.setBounds(10, 10, 180, 15);
+        label7.setBounds(10, 10, 180, 14);
         jPanel5.add(txtTelaCadastroEnderecoCidade);
-        txtTelaCadastroEnderecoCidade.setBounds(10, 30, 250, 19);
+        txtTelaCadastroEnderecoCidade.setBounds(10, 30, 250, 34);
 
         add(jPanel5);
-        jPanel5.setBounds(10, 280, 280, 60);
+        jPanel5.setBounds(10, 300, 280, 70);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTelaCadastroEnderecoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaCadastroEnderecoCadastroActionPerformed
-        int Posicao = 0;
-        Endereco Auxiliar = new Endereco();
-        TelaCadastroDadosPessoais Array = new TelaCadastroDadosPessoais();
+        TelaLogin TelaLog = new TelaLogin();
+        TelaCadastroDadosPessoais DadosPessoais = new TelaCadastroDadosPessoais();
         
-        Auxiliar.setRua(txtTelaCadastroEnderecoRua1.getText());
-        Auxiliar.setBairro(txtTelaCadastroEnderecoBairro.getText());
-        Auxiliar.setCEP(txtTelaCadastroEnderecoCEP.getText());
-        Auxiliar.setCidade(txtTelaCadastroEnderecoCidade.getText());
-        Auxiliar.setComplemento(txtTelaCadastroEnderecoComplemento.getText());
-        
-        Clientes.add(a, new Cliente(Array.NomeCadastro, Array.CPF, Array.Email, Array.Telefone, Array.DataNascimento));
-        JOptionPane.showMessageDialog(null, Clientes.get(a).getNome());
-        JOptionPane.showMessageDialog(null, Clientes.size());
-        for(int i = 0; i <= Clientes.size(); i++){
-            if(Clientes.isEmpty()){
-                JOptionPane.showMessageDialog(null, "Não há clientes");
-            }else{
-                if(Clientes.get(i) == null){
-                    JOptionPane.showMessageDialog(null, "Não há clientes");
-                }else{
-                    Posicao = Clientes.indexOf(Clientes.get(i).getNome().equals(Array.ConfirmandoNome));
-                    Clientes.get(Posicao).setEnderecoPessoa(Auxiliar);
-                    JOptionPane.showMessageDialog(null, "Cliente Cadastrado com Sucesso!!!");
-                }
-            }
+        //---------------------------------------------Criando um objeto cliente e adicionando seus valores--------------------------------
+        Cliente Usuario = new Cliente(DadosPessoais.txtTelaCadastroNome.getText(), DadosPessoais.txtTelaCadastroCPF.getText(), DadosPessoais.txtTelaCadastroEmail.getText(),
+        DadosPessoais.txtTelaCadastroTelefone.getText(), DadosPessoais.txtTelaCadastroDadosPessoaisDataNascimento.getText(), 
+        DadosPessoais.pfTelaCadastroDadosPessoaisSenha.getText());
+ 
+        //---------------------------------------------Atribuindo um endereco ao cliente
+        Endereco EnderecoCliente = new Endereco(txtTelaCadastroEnderecoRua1.getText(), txtTelaCadastroEnderecoBairro.getText(), txtTelaCadastroEnderecoCEP.getText(), txtTelaCadastroEnderecoCidade.getText());
+        Usuario.setEnderecoPessoa(EnderecoCliente);
+       
+        //--------------------------------------------Adicionando o cliente ao "Banco"--------------------------------
+        if(AdicionarUsr(Usuario) == true){
+            
+            JOptionPane.showMessageDialog(null, "Usuario Cadastrado com Sucesso");
+            
+            txtTelaCadastroEnderecoBairro.setText("");
+            txtTelaCadastroEnderecoCEP.setText("");
+            txtTelaCadastroEnderecoCidade.setText("");
+            txtTelaCadastroEnderecoComplemento.setText("");
+            txtTelaCadastroEnderecoRua1.setText("");
+            
+           JOptionPane.showMessageDialog(null, usu.get(0).getEmail() + "" + usu.get(0).getSenha());
+            JOptionPane.showMessageDialog(null, "Indo para a area de login");
+            
+            TelaLog.setSize(310, 510);
+            TelaLog.setLocation(0, 0);
+
+
+            panelTelaInicialBase.removeAll();
+            panelTelaInicialBase.add(TelaLog, BorderLayout.CENTER);
+            panelTelaInicialBase.revalidate();
+            panelTelaInicialBase.repaint();
+            numUsr = numUsr + 1;
+        }else{
+            JOptionPane.showMessageDialog(null, "Houveram erros no cadastro");
+            txtTelaCadastroEnderecoBairro.setText("");
+            txtTelaCadastroEnderecoCEP.setText("");
+            txtTelaCadastroEnderecoCidade.setText("");
+            txtTelaCadastroEnderecoComplemento.setText("");
+            txtTelaCadastroEnderecoRua1.setText("");
         }
         
-        for(int x = 0; x <= Clientes.size(); x++){
-            JOptionPane.showMessageDialog(null, "Pessoa = " + Clientes.get(x) + "Endereco da pessoa = " + Clientes.get(x).getEnderecoPessoa());
-        }
-        a++;
     }//GEN-LAST:event_btnTelaCadastroEnderecoCadastroActionPerformed
 
 
